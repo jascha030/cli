@@ -1,37 +1,37 @@
 {
-    "name": "jascha030/cli",
-    "description": "'",
-    "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.6",
-        "phpunit/phpunit": "^9.5",
-        "roave/security-advisories": "dev-latest"
-    },
-    "license": "MIT",
-    "autoload": {
-        "files": [
-            "includes/helpers.php"
-        ],
-        "psr-4": {
-            "Jascha030\\CLI\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Jascha030\\CLI\\Tests\\": "tests/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Jascha030",
-            "email": "contact@jaschavanaalst.nl"
-        }
+  "name": "jascha030/cli",
+  "description": "Service class for executing shell commands using symfony/process, heavily inspired by the CommandLine class in laravel/valet.",
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.6",
+    "phpunit/phpunit": "^9.5",
+    "roave/security-advisories": "dev-latest"
+  },
+  "license": "MIT",
+  "autoload": {
+    "files": [
+      "includes/helpers.php"
     ],
-    "minimum-stability": "stable",
-    "require": {
-        "symfony/process": "^6.0"
-    },
-    "scripts": {
-        "phpunit": "phpunit --config phpunit.xml",
-        "format": "php-cs-fixer fix --config=.php-cs-fixer.dist.php"
+    "psr-4": {
+      "Jascha030\\CLI\\": "src/"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Jascha030\\CLI\\Tests\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Jascha030",
+      "email": "contact@jaschavanaalst.nl"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "symfony/process": "^6.0"
+  },
+  "scripts": {
+    "phpunit": "phpunit --config phpunit.xml",
+    "format": "php-cs-fixer fix --config=.php-cs-fixer.dist.php"
+  }
 }
