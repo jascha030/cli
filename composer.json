@@ -1,5 +1,5 @@
 {
-    "name": "jascha030/cli-service",
+    "name": "jascha030/cli",
     "description": "'",
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.6",
@@ -8,8 +8,16 @@
     },
     "license": "MIT",
     "autoload": {
+        "files": [
+            "includes/helpers.php"
+        ],
         "psr-4": {
-            "Jascha030\\CliService\\": "src/"
+            "Jascha030\\CLI\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jascha030\\CLI\\Tests\\": "tests/"
         }
     },
     "authors": [
@@ -19,5 +27,11 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {
+        "symfony/process": "^6.0"
+    },
+    "scripts": {
+        "phpunit": "phpunit --config phpunit.xml",
+        "format": "php-cs-fixer fix --config=.php-cs-fixer.dist.php"
+    }
 }
