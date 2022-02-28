@@ -7,8 +7,8 @@
     "CLI",
     "shell",
     "service",
-    "symfony/console",
-    "symfony/process"
+    "symfony-console",
+    "symfony-process"
   ],
   "authors": [
     {
