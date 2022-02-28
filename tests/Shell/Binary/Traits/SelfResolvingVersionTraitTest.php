@@ -17,7 +17,7 @@ use Symfony\Component\Process\PhpExecutableFinder;
  * @internal
  * @covers \Jascha030\CLI\Shell\Binary\Traits\SelfResolvingVersionTrait
  */
-class SelfResolvingVersionTraitTest extends TestCase
+final class SelfResolvingVersionTraitTest extends TestCase
 {
     public function testGetVersion(): void
     {
