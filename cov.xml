@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1646073842">
-  <project timestamp="1646073842">
-    <file name="/Users/jaschavanaalst/.development/Projects/Composer/Console/cli-service/src/Shell/Binary/BinaryAbstract.php">
+<coverage generated="1646082252">
+  <project timestamp="1646082252">
+    <file name="/Users/jaschavanaalst/.development/Projects/Composer/Services/cli-service/src/Shell/Binary/BinaryAbstract.php">
       <class name="Jascha030\CLI\Shell\Binary\BinaryAbstract" namespace="global">
-        <metrics complexity="4" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="6" coveredelements="6"/>
+        <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="8" coveredelements="8"/>
       </class>
+      <line num="9" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="16" type="method" name="getName" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="18" type="stmt" count="1"/>
       <line num="21" type="method" name="getPath" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="23" type="stmt" count="1"/>
       <line num="26" type="method" name="getVersion" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="28" type="stmt" count="1"/>
-      <metrics loc="30" ncloc="30" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="6" coveredelements="6"/>
+      <metrics loc="30" ncloc="30" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="8" coveredelements="8"/>
     </file>
-    <file name="/Users/jaschavanaalst/.development/Projects/Composer/Console/cli-service/src/Shell/Binary/BinaryInterface.php">
+    <file name="/Users/jaschavanaalst/.development/Projects/Composer/Services/cli-service/src/Shell/Binary/BinaryInterface.php">
       <metrics loc="16" ncloc="16" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <file name="/Users/jaschavanaalst/.development/Projects/Composer/Console/cli-service/src/Shell/Binary/Traits/SelfResolvingPathTrait.php">
+    <file name="/Users/jaschavanaalst/.development/Projects/Composer/Services/cli-service/src/Shell/Binary/InvokableBinaryInterface.php">
+      <metrics loc="10" ncloc="10" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="/Users/jaschavanaalst/.development/Projects/Composer/Services/cli-service/src/Shell/Binary/Traits/SelfResolvingPathTrait.php">
       <class name="Jascha030\CLI\Shell\Binary\Traits\SelfResolvingPathTrait" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
       </class>
@@ -27,7 +31,7 @@
       <line num="19" type="stmt" count="1"/>
       <metrics loc="21" ncloc="21" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
     </file>
-    <file name="/Users/jaschavanaalst/.development/Projects/Composer/Console/cli-service/src/Shell/Binary/Traits/SelfResolvingVersionTrait.php">
+    <file name="/Users/jaschavanaalst/.development/Projects/Composer/Services/cli-service/src/Shell/Binary/Traits/SelfResolvingVersionTrait.php">
       <class name="Jascha030\CLI\Shell\Binary\Traits\SelfResolvingVersionTrait" namespace="global">
         <metrics complexity="5" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="13" coveredelements="13"/>
       </class>
@@ -46,21 +50,21 @@
       <line num="36" type="stmt" count="3"/>
       <metrics loc="38" ncloc="38" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="13" coveredelements="13"/>
     </file>
-    <file name="/Users/jaschavanaalst/.development/Projects/Composer/Console/cli-service/src/Shell/Binary/Traits/ShellDecoratorTrait.php">
+    <file name="/Users/jaschavanaalst/.development/Projects/Composer/Services/cli-service/src/Shell/Binary/Traits/ShellDecoratorTrait.php">
       <class name="Jascha030\CLI\Shell\Binary\Traits\ShellDecoratorTrait" namespace="global">
         <metrics complexity="4" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="1" elements="8" coveredelements="2"/>
       </class>
-      <line num="15" type="method" name="run" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="17" type="stmt" count="1"/>
-      <line num="20" type="method" name="runAsUser" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="22" type="stmt" count="0"/>
-      <line num="25" type="method" name="quietly" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="27" type="stmt" count="0"/>
-      <line num="30" type="method" name="quietlyAsUser" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="32" type="stmt" count="0"/>
-      <metrics loc="33" ncloc="33" classes="1" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="1" elements="8" coveredelements="2"/>
+      <line num="27" type="method" name="run" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="29" type="stmt" count="1"/>
+      <line num="35" type="method" name="runAsUser" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="37" type="stmt" count="0"/>
+      <line num="43" type="method" name="quietly" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="45" type="stmt" count="0"/>
+      <line num="51" type="method" name="quietlyAsUser" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="53" type="stmt" count="0"/>
+      <metrics loc="55" ncloc="35" classes="1" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="1" elements="8" coveredelements="2"/>
     </file>
-    <file name="/Users/jaschavanaalst/.development/Projects/Composer/Console/cli-service/src/Shell/Shell.php">
+    <file name="/Users/jaschavanaalst/.development/Projects/Composer/Services/cli-service/src/Shell/Shell.php">
       <class name="Jascha030\CLI\Shell\Shell" namespace="global">
         <metrics complexity="14" methods="8" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="9" elements="32" coveredelements="12"/>
       </class>
@@ -98,9 +102,9 @@
       <line num="104" type="stmt" count="2"/>
       <metrics loc="106" ncloc="83" classes="1" methods="8" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="9" elements="32" coveredelements="12"/>
     </file>
-    <file name="/Users/jaschavanaalst/.development/Projects/Composer/Console/cli-service/src/Shell/ShellInterface.php">
+    <file name="/Users/jaschavanaalst/.development/Projects/Composer/Services/cli-service/src/Shell/ShellInterface.php">
       <metrics loc="28" ncloc="16" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <metrics files="7" loc="272" ncloc="237" classes="5" methods="19" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="45" coveredstatements="27" elements="64" coveredelements="38"/>
+    <metrics files="8" loc="304" ncloc="249" classes="5" methods="20" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="46" coveredstatements="28" elements="66" coveredelements="40"/>
   </project>
 </coverage>
