@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1646061837">
-  <project timestamp="1646061837">
+<coverage generated="1646071859">
+  <project timestamp="1646071859">
     <file name="/Users/jaschavanaalst/.development/Projects/Composer/Console/cli-service/src/Shell/Binary/BinaryAbstract.php">
       <class name="Jascha030\CLI\Shell\Binary\BinaryAbstract" namespace="global">
         <metrics complexity="4" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="6" coveredelements="6"/>
@@ -14,16 +14,18 @@
       <metrics loc="30" ncloc="30" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="6" coveredelements="6"/>
     </file>
     <file name="/Users/jaschavanaalst/.development/Projects/Composer/Console/cli-service/src/Shell/Binary/BinaryInterface.php">
-      <metrics loc="15" ncloc="15" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      <metrics loc="16" ncloc="16" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
     <file name="/Users/jaschavanaalst/.development/Projects/Composer/Console/cli-service/src/Shell/Binary/Traits/SelfResolvingPathTrait.php">
       <class name="Jascha030\CLI\Shell\Binary\Traits\SelfResolvingPathTrait" namespace="global">
-        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+        <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
       </class>
-      <line num="13" type="method" name="getPath" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="15" type="stmt" count="0"/>
-      <line num="17" type="stmt" count="0"/>
-      <metrics loc="19" ncloc="19" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+      <line num="13" type="method" name="getPath" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="15" type="stmt" count="1"/>
+      <line num="16" type="stmt" count="1"/>
+      <line num="17" type="stmt" count="1"/>
+      <line num="19" type="stmt" count="1"/>
+      <metrics loc="21" ncloc="21" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
     </file>
     <file name="/Users/jaschavanaalst/.development/Projects/Composer/Console/cli-service/src/Shell/Binary/Traits/SelfResolvingVersionTrait.php">
       <class name="Jascha030\CLI\Shell\Binary\Traits\SelfResolvingVersionTrait" namespace="global">
@@ -99,6 +101,6 @@
     <file name="/Users/jaschavanaalst/.development/Projects/Composer/Console/cli-service/src/Shell/ShellInterface.php">
       <metrics loc="28" ncloc="16" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <metrics files="7" loc="267" ncloc="232" classes="5" methods="19" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="43" coveredstatements="22" elements="62" coveredelements="31"/>
+    <metrics files="7" loc="270" ncloc="235" classes="5" methods="19" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="45" coveredstatements="26" elements="64" coveredelements="36"/>
   </project>
 </coverage>
