@@ -12,8 +12,10 @@ trait SelfResolvingPathTrait
 
     public function getPath(): string
     {
-        $command = "$(which {$this->getName()})";
+        $output = Process::fromShellCommandline("which {$this->getName()}")
+            ->mustRun()
+            ->getOutput();
 
-        return Process::fromShellCommandline($command)->mustRun()->getOutput();
+        return substr($output, 0, -1);
     }
 }
