@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Jascha030\CLI\Shell\Binary;
+namespace Jascha030\CLI\Shell\Binary\Traits;
 
 use Jascha030\CLI\Shell\ShellInterface;
 

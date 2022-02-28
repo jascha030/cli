@@ -22,13 +22,13 @@ trait SelfResolvingVersionTrait
         $match = preg_match($this->getVersionRegex(), $process->mustRun()->getOutput(), $matches);
 
         return $match > 0
-            ? $matches[1]
+            ? $matches[0]
             : $process->mustRun()->getOutput();
     }
 
     public function getVersionRegex(): ?string
     {
-        return "/\d{1,2}\.\d{1,2}\.\d{1,2}/";
+        return '/\\d{1,2}\\.\\d{1,2}\\.\\d{1,2}/';
     }
 
     public function getVersionCommand(): string
