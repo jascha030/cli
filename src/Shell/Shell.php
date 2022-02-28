@@ -26,7 +26,7 @@ class Shell implements ShellInterface
     {
         $user = user();
 
-        return $this->runCommand("sudo -u {$user} {$command}");
+        return $this->runCommand("sudo -u {$user} {$command}", $cwd, $onError);
     }
 
     /**
@@ -45,12 +45,12 @@ class Shell implements ShellInterface
         $this->runCommand("{$command} > /dev/null 2>&1", $cwd, $onError);
     }
 
-    public function passthru(string $command, ?OutputInterface $output = null, $cwd = null): void
     /**
      * Execute a command and write the console output to current STDOUT.
      *
      * @param null|OutputInterface $output OutputInterface to write to, if none is provided, php's `passthru()` function is used
      */
+    public function passthru(string $command, ?OutputInterface $output = null, ?string $cwd = null): void
     {
         if (null !== $output) {
             passthru($command);
@@ -65,9 +65,11 @@ class Shell implements ShellInterface
         }
     }
 
-    protected function runCommand(string $command, ?string $cwd = null, ?callable $onError = null): string
+    public function runCommand(string $command, ?string $cwd = null, ?callable $onError = null): string
     {
-        $onError = $onError ?: static function () {};
+        $onError = $onError ?: static function () {
+        };
+
         $process = $this->create($command, $cwd)->mustRun();
 
         if ($process->getExitCode() > 0) {
