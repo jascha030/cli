@@ -10,8 +10,7 @@ abstract class BinaryAbstract implements BinaryInterface
         private string $name,
         private string $path,
         private ?string $version = null
-    )
-    {
+    ) {
     }
 
     public function getName(): string

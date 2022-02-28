@@ -8,6 +8,10 @@ use Jascha030\CLI\Shell\Shell;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 
+/**
+ * @internal
+ * @covers \Jascha030\CLI\Shell\Shell
+ */
 class ShellTest extends TestCase
 {
     public function testRun(): void
