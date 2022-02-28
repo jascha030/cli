@@ -1,11 +1,21 @@
 {
   "name": "jascha030/cli",
   "description": "Service class for executing shell commands using symfony/process, heavily inspired by the CommandLine class in laravel/valet.",
-  "require-dev": {
-    "friendsofphp/php-cs-fixer": "^3.6",
-    "phpunit/phpunit": "^9.5",
-    "roave/security-advisories": "dev-latest"
-  },
+  "keywords": [
+    "php",
+    "console",
+    "CLI",
+    "shell",
+    "service",
+    "symfony/console",
+    "symfony/process"
+  ],
+  "authors": [
+    {
+      "name": "Jascha030",
+      "email": "contact@jaschavanaalst.nl"
+    }
+  ],
   "license": "MIT",
   "autoload": {
     "files": [
@@ -15,20 +25,19 @@
       "Jascha030\\CLI\\": "src/"
     }
   },
+  "minimum-stability": "stable",
   "autoload-dev": {
     "psr-4": {
       "Jascha030\\CLI\\Tests\\": "tests/"
     }
   },
-  "authors": [
-    {
-      "name": "Jascha030",
-      "email": "contact@jaschavanaalst.nl"
-    }
-  ],
-  "minimum-stability": "stable",
   "require": {
     "symfony/process": "^6.0"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.6",
+    "phpunit/phpunit": "^9.5",
+    "roave/security-advisories": "dev-latest"
   },
   "scripts": {
     "phpunit": "phpunit --config phpunit.xml",
