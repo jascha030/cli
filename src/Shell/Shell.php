@@ -11,11 +11,17 @@ use function passthru;
 
 class Shell implements ShellInterface
 {
+    /**
+     * {@inheritDoc}
+     */
     public function run(string $command, ?string $cwd = null, ?callable $onError = null): string
     {
         return $this->runCommand($command, $cwd, $onError);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function runAsUser(string $command, ?string $cwd = null, ?callable $onError = null): string
     {
         $user = user();
@@ -23,17 +29,28 @@ class Shell implements ShellInterface
         return $this->runCommand("sudo -u {$user} {$command}");
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function quietly(string $command, ?string $cwd = null, ?callable $onError = null): void
     {
         $this->runCommand("{$command} > /dev/null 2>&1", $cwd, $onError);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function quietlyAsUser(string $command, ?string $cwd = null, ?callable $onError = null): void
     {
         $this->runCommand("{$command} > /dev/null 2>&1", $cwd, $onError);
     }
 
     public function passthru(string $command, ?OutputInterface $output = null, $cwd = null): void
+    /**
+     * Execute a command and write the console output to current STDOUT.
+     *
+     * @param null|OutputInterface $output OutputInterface to write to, if none is provided, php's `passthru()` function is used
+     */
     {
         if (null !== $output) {
             passthru($command);
@@ -66,6 +83,9 @@ class Shell implements ShellInterface
         return $output;
     }
 
+    /**
+     * Return a started Process which can be used to loop, through the output.
+     */
     protected function start(string $command, ?string $cwd): Process
     {
         $process = $this->create($command, $cwd);
@@ -74,6 +94,9 @@ class Shell implements ShellInterface
         return $process;
     }
 
+    /**
+     * Create a Process object.
+     */
     protected function create(string $command, ?string $cwd = null): Process
     {
         return Process::fromShellCommandline($command, $cwd);
