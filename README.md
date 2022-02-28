@@ -157,6 +157,38 @@ To kickstart implementation, various Traits are available, together with an abst
       the `SelfResolvingVersionTrait::getVersionRegex()` method. When this method returns `null` it will skip the regex
       matching, and use the command's full output.
 
+### Helpers
+
+A set of helper functions is included in `includes/helper.php` under the `Jascha030\Cli\Helpers` namespace.
+
+**Get user, or sudo user when available.**
+
+`\Jascha030\CLI\Helpers\user(): ?string;`
+
+**Output a message to the console.**
+
+`\Jascha030\CLI\Helpers\output(string $message, ?OutputInterface $output = null): void;`
+
+**Output an error to the console.**
+
+`\Jascha030\CLI\Helpers\error(string $message, ?OutputInterface $output = null): void;`
+
+**Output an info message to the console.**
+
+`\Jascha030\CLI\Helpers\info(string $message, ?OutputInterface $output = null): void;`
+
+**Output a multiline message to the console.**
+
+`\Jascha030\CLI\Helpers\multilineOutput(array $message, ?OutputInterface $output = null): void;`
+
+**Output a multiline error to the console.**
+
+`\Jascha030\CLI\Helpers\multilineError(array $message, ?OutputInterface $output = null): void;`
+
+**Output a multiline info message to the console.**
+
+`\Jascha030\CLI\Helpers\multilineInfo(array $message, ?OutputInterface $output = null): void;`
+
 ## Development
 
 Clone this repo, and run `composer install` inside the repo.
@@ -192,10 +224,6 @@ If you have phpunit installed globally, and want to use that, pass the config in
 phpunit --config phpunit.xml
 ```
 
-## Inspiration and Credits
-
-This package is based around the `ShellInterface`, and specifically it's implementation, the `Shell` class. Even though
-this package adds some more features, the class in itself is a slightly edited (for personal preference) version
 of [the CommandLine class](https://github.com/laravel/valet/blob/master/cli/Valet/CommandLine.php) of
 the `laravel/valet` package.
 
