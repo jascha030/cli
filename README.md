@@ -224,10 +224,6 @@ If you have phpunit installed globally, and want to use that, pass the config in
 phpunit --config phpunit.xml
 ```
 
-## Inspiration and Credits
-
-This package is based around the `ShellInterface`, and specifically it's implementation, the `Shell` class. Even though
-this package adds some more features, the class in itself is a slightly edited (for personal preference) version
 of [the CommandLine class](https://github.com/laravel/valet/blob/master/cli/Valet/CommandLine.php) of
 the `laravel/valet` package.
 
