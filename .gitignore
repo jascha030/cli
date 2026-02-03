@@ -1,9 +1,25 @@
-.idea
+### Default project gitignore
 
-.vscode
+## IDE Projectfiles
+/.idea/
+/.var/
 
-vendor
+/**.cache
 
-**.cache
-.DS_Store
+## Library
+vendor/
+/tools
 
+## Env
+/.env
+/auth.json
+/.pm.toml
+
+## Other
+/*.DS_Store
+/.DS_Store
+/*.sql
+/TODO.md
+/results.md
+
+.phpactor.json
