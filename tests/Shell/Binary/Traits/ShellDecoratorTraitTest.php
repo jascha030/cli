@@ -7,14 +7,15 @@ namespace Jascha030\CLI\Tests\Shell\Binary\Traits;
 use Jascha030\CLI\Shell\Binary\Traits\ShellDecoratorTrait;
 use Jascha030\CLI\Shell\Shell;
 use Jascha030\CLI\Shell\ShellInterface;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Process\PhpExecutableFinder;
 
 /**
  * @internal
- * @covers \Jascha030\CLI\Shell\Binary\Traits\ShellDecoratorTrait
  */
+#[CoversClass(ShellDecoratorTrait::class)]
 class ShellDecoratorTraitTest extends TestCase
 {
     public function testRun(): void

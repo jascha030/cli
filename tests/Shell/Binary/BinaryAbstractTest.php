@@ -6,33 +6,29 @@ namespace Jascha030\CLI\Tests\Shell\Binary;
 
 use Jascha030\CLI\Shell\Binary\BinaryAbstract;
 use Jascha030\CLI\Shell\Binary\BinaryInterface;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\Depends;
 use PHPUnit\Framework\TestCase;
 
 /**
  * @internal
- * @covers \Jascha030\CLI\Shell\Binary\BinaryAbstract
  */
+#[CoversClass(BinaryAbstract::class)]
 class BinaryAbstractTest extends TestCase
 {
-    /**
-     * @depends testConstruct
-     */
+    #[Depends('testConstruct')]
     public function testGetName(BinaryInterface $binary): void
     {
         $this->assertEquals('testBinary', $binary->getName());
     }
 
-    /**
-     * @depends testConstruct
-     */
+    #[Depends('testConstruct')]
     public function testGetVersion(BinaryInterface $binary): void
     {
         $this->assertEquals('1.0.0', $binary->getVersion());
     }
 
-    /**
-     * @depends testConstruct
-     */
+    #[Depends('testConstruct')]
     public function testGetPath(BinaryInterface $binary): void
     {
         $this->assertEquals(__DIR__, $binary->getPath());

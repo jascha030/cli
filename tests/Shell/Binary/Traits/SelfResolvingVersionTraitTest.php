@@ -5,18 +5,21 @@ declare(strict_types=1);
 namespace Jascha030\CLI\Tests\Shell\Binary\Traits;
 
 use Jascha030\CLI\Shell\Binary\BinaryAbstract;
-use Jascha030\CLI\Shell\Binary\Traits\ShellDecoratorTrait;
 use Jascha030\CLI\Shell\Binary\Traits\SelfResolvingVersionTrait;
+use Jascha030\CLI\Shell\Binary\Traits\ShellDecoratorTrait;
 use Jascha030\CLI\Shell\Shell;
 use Jascha030\CLI\Shell\ShellInterface;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Process\PhpExecutableFinder;
 
+use const PHP_VERSION;
+
 /**
  * @internal
- * @covers \Jascha030\CLI\Shell\Binary\Traits\SelfResolvingVersionTrait
  */
+#[CoversClass(SelfResolvingVersionTrait::class)]
 final class SelfResolvingVersionTraitTest extends TestCase
 {
     public function testGetVersion(): void
@@ -68,8 +71,8 @@ final class SelfResolvingVersionTraitTest extends TestCase
         $phpPath = (new PhpExecutableFinder())->find();
 
         return new class ('php', $phpPath, null) extends BinaryAbstract {
-            use ShellDecoratorTrait;
             use SelfResolvingVersionTrait;
+            use ShellDecoratorTrait;
 
             public function getShell(): ShellInterface
             {
